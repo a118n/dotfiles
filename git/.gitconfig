@@ -1,0 +1,8 @@
+[user]
+	name = electricdrop
+	email = electricdrop@outlook.com
+[credential]
+	helper = cache
+	username = electricdrop
+[color]
+	ui = true
