@@ -4,7 +4,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin
 
 ZSH_THEME="ys"
 
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 plugins=(git colored-man)
 
@@ -20,10 +20,12 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 zstyle ':completion:*:pacaur:*' remote-access false
 
-zstyle ':completion:*' menu yes select
+#zstyle ':completion:*' menu yes select
 
 #Use custom ls dir colors
 #eval `dircolors ~/.dircolors`
+
+alias ls='ls -lash'
 
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
@@ -40,6 +42,13 @@ alias clearcache='sudo pacman -Scc'
 alias lsforeign='pacman -Qm'
 
 alias rmfull='sudo pacman -Rcnsu'
+
+alias pacsearch='pacman -Ss'
+
+alias start='sudo systemctl start'
+alias stop='sudo systemctl stop'
+alias restart='sudo systemctl restart'
+alias status='systemctl status'
 
 #alias playd3='env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" setarch i386 -L -B -R -3 primusrun wine C:\\Program\ Files\ \(x86\)\\Diablo\ III\\Diablo\ III.exe &> /dev/null'
 

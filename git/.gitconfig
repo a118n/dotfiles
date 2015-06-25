@@ -6,3 +6,5 @@
 	username = electricdrop
 [color]
 	ui = true
+[push]
+	default = simple
