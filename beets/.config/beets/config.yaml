@@ -1,0 +1,66 @@
+directory: /run/media/dallen/Seagate/Music/Beets
+
+library: /run/media/dallen/Seagate/Music/Beets/Library.blb
+
+import:
+    copy: yes
+    write: yes
+    resume: yes
+    quiet_fallback: skip
+    timid: yes
+    detail: yes
+    group_albums: yes
+    languages: en
+    log: beetslog.txt
+
+ignore: .AppleDouble ._* *~ .DS_Store
+
+threaded: yes
+
+art_filename: Cover
+
+musicbrainz:
+    searchlimit: 20
+
+ui:
+    color: yes
+    colors:
+        text_success: green
+        text_warning: yellow
+        text_error: red
+        text_highlight: red
+        text_highlight_minor: lightgray
+        action_default: turquoise
+        action: blue
+
+paths:
+    default: $albumartist/$album%aunique{}/$track $title
+    singleton: $artist/$title
+    comp: Various Artists/$album%aunique{}/$track $title
+
+plugins: discogs fetchart embedart scrub zero
+
+fetchart:
+    cautious: true
+    cover_names: front cover art album folder
+    sources: itunes *
+    google_search: yes
+
+replace:
+    #'[+]': '&'
+    '[\\/]': _
+    '^\.': _
+    '[\x00-\x1f]': _
+    '[<>:"\?\*\|]': _
+    '\.$': _
+    '\s+$': ''
+    '^\s+': ''
+
+zero:
+    fields: comments
+
+match:
+    preferred:
+        countries: ['US', 'JP', 'GB|UK']
+        media: ['CD', 'Digital Media|File']
+        original_year: yes
