@@ -53,3 +53,4 @@ alias status='systemctl status'
 ### Misc: ###
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias playd3='echo "Running Diablo III: Reaper of Souls"; env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" primusrun wine C:\\Program\ Files\ \(x86\)\\Diablo\ III\\Diablo\ III\ Launcher.exe'
+alias nvidia-settings='sudo optirun -b none nvidia-settings -c :8'
