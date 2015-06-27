@@ -23,7 +23,7 @@ zstyle ':completion:*:pacaur:*' remote-access false
 #zstyle ':completion:*' menu yes select
 
 ### Fortune/Cowsay Generator: ###
-fortune archer | cowsay -f $(ls /usr/share/cows/ | shuf | head -n 1)
+fortune | cowsay -f $(ls /usr/share/cows/ | shuf | head -n 1)
 
 
 
@@ -52,5 +52,7 @@ alias status='systemctl status'
 
 ### Misc: ###
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
-alias playd3='echo "Running Diablo III: Reaper of Souls"; env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" primusrun wine C:\\Program\ Files\ \(x86\)\\Diablo\ III\\Diablo\ III\ Launcher.exe'
+
+#First run $ optirun zsh, then invoke this alias.
+alias playd3='echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" wine C:\\Program\ Files\ \(x86\)\\Diablo\ III\\Diablo\ III.exe 2> /dev/null &'
 alias nvidia-settings='sudo optirun -b none nvidia-settings -c :8'
