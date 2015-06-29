@@ -23,7 +23,8 @@ zstyle ':completion:*:pacaur:*' remote-access false
 #zstyle ':completion:*' menu yes select
 
 ### Fortune/Cowsay Generator: ###
-fortune | cowsay -f $(ls /usr/share/cows/ | shuf | head -n 1)
+#fortune dexter | cowsay -f $(ls /usr/share/cows/ | shuf | head -n 1) | lolcat
+fortune | cowsay -f small | lolcat
 
 
 
@@ -43,6 +44,7 @@ alias lsforeign='pacaur -Qm'
 alias rmfull='pacaur -Rcnsu'
 alias pacinstall='pacaur -S'
 alias pacsearch='pacaur -Ss'
+alias pacls='pacaur -Qqe'
 
 ### Systemd: ###
 alias start='sudo systemctl start'
@@ -50,9 +52,18 @@ alias stop='sudo systemctl stop'
 alias restart='sudo systemctl restart'
 alias status='systemctl status'
 
+### Git: ###
+alias gs='git status'
+alias gc='git commit -am'
+alias gp='git push -u origin master'
+
 ### Misc: ###
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 #First run $ optirun zsh, then invoke this alias.
-alias playd3='echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" wine C:\\Program\ Files\ \(x86\)\\Diablo\ III\\Diablo\ III.exe 2> /dev/null &'
+#alias playd3='echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" wine C:\\Program\ Files\ \(x86\)\\Diablo\ III\\Diablo\ III.exe 2> /dev/null'
+alias playd3='echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" setarch i386 -L -B -R -3 wine C:\\Program\ Files\\Diablo\ III\\Diablo\ III.exe 2> /dev/null'
 alias nvidia-settings='sudo optirun -b none nvidia-settings -c :8'
+alias updatedb='sudo updatedb'
+alias cowshow='cowsay -l | sed "1d;s/ /\n/g" | while read f; do cowsay -f $f $f; done'
+alias winenew='python ~/Git/scripts/newwineprefix.py'
