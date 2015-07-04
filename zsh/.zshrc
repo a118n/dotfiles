@@ -24,8 +24,11 @@ zstyle ':completion:*:pacaur:*' remote-access false
 
 ### Fortune/Cowsay Generator: ###
 #fortune dexter | cowsay -f $(ls /usr/share/cows/ | shuf | head -n 1) | lolcat
-fortune | cowsay -f small | lolcat
+fortune | cowsay -f cat | lolcat
 
+### Weather: ###
+echo
+wego 0
 
 
 ####### ALIASES: #######
@@ -57,12 +60,16 @@ alias gs='git status'
 alias gc='git commit -am'
 alias gp='git push -u origin master'
 
+### Beets: ###
+alias bi='beet import'
+alias bf='beet fetchart'
+alias be='beet embedart'
+
 ### Misc: ###
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 #First run $ optirun zsh, then invoke this alias.
-#alias playd3='echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" wine C:\\Program\ Files\ \(x86\)\\Diablo\ III\\Diablo\ III.exe 2> /dev/null'
-alias playd3='echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" setarch i386 -L -B -R -3 wine C:\\Program\ Files\\Diablo\ III\\Diablo\ III.exe 2> /dev/null'
+alias playd3='echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" setarch i386 -L -B -R -3 wine C:\\Program\ Files\\Diablo\ III\\Diablo\ III.exe > /dev/null 2>&1'
 alias nvidia-settings='sudo optirun -b none nvidia-settings -c :8'
 alias updatedb='sudo updatedb'
 alias cowshow='cowsay -l | sed "1d;s/ /\n/g" | while read f; do cowsay -f $f $f; done'
