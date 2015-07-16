@@ -37,6 +37,8 @@ wego 0
 alias ls='ls -lash --color=auto'
 alias cls='clear'
 alias grep='grep --color=auto'
+alias df='df -hT'
+alias updatedb='sudo updatedb'
 
 ### Pacman: ###
 alias upgrade='pacaur -Syu'
@@ -57,6 +59,7 @@ alias status='systemctl status'
 
 ### Git: ###
 alias gs='git status'
+alias ga='git add'
 alias gc='git commit -am'
 alias gp='git push -u origin master'
 
@@ -68,13 +71,14 @@ alias bu='beet update'
 alias bl='beet list'
 alias bs='beet stats'
 
-### Misc: ###
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+### Games/Wine: ###
+#First run optirun zsh, then invoke this alias.
+alias playd3='echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/home/dallen/Games/Diablo 3" setarch i386 -L -B -R -3 wine C:\\Program\ Files\\Diablo\ III\\Diablo\ III.exe > /dev/null 2>&1'
+alias playpoe='cd /home/dallen/Games/Path\ of\ Exile/drive_c/Program\ Files/Grinding\ Gear\ Games/Path\ of\ Exile/; echo "Running Path of Exile"; env WINEPREFIX="/home/dallen/Games/Path of Exile" wine PathOfExile.exe'
 
-#First run $ optirun zsh, then invoke this alias.
-alias playd3='echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/run/media/dallen/Seagate/Games/Diablo 3" setarch i386 -L -B -R -3 wine C:\\Program\ Files\\Diablo\ III\\Diablo\ III.exe > /dev/null 2>&1'
+### Misc: ###
+
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias nvidia-settings='sudo optirun -b none nvidia-settings -c :8'
-alias updatedb='sudo updatedb'
 alias cowshow='cowsay -l | sed "1d;s/ /\n/g" | while read f; do cowsay -f $f $f; done'
 alias winenew='python ~/Git/scripts/newwineprefix.py'
-alias playwow64='echo "Running World of Warcraft (64-Bit)"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/run/media/dallen/Seagate/Games/World of Warcraft" optirun wine "C:\Program Files (x86)\World of Warcraft\Wow-64.exe"'
