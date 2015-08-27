@@ -73,7 +73,7 @@ alias bs='beet stats'
 
 ### Games/Wine: ###
 #First run optirun zsh, then invoke this alias.
-alias playd3='echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/home/dallen/Games/Diablo 3" setarch i386 -L -B -R -3 wine C:\\Program\ Files\\Diablo\ III\\Diablo\ III.exe > /dev/null 2>&1'
+alias playd3='cd /home/dallen/Games/Diablo\ 3/drive_c/Program\ Files/Diablo\ III/; echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/home/dallen/Games/Diablo 3" setarch i386 -L -B -R -3 wine C:\\Program\ Files\\Diablo\ III\\Diablo\ III.exe > /dev/null 2>&1'
 
 ### Misc: ###
 
