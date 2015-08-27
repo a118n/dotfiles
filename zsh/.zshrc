@@ -1,7 +1,7 @@
 ####### VARIABLES: #######
 
 export ZSH=/home/dallen/.oh-my-zsh
-export EDITOR="nano"
+export EDITOR="vim"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 
 
