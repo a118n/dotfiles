@@ -15,3 +15,15 @@ set number
 
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
+
+" Always wrap long lines:
+set wrap
+
+" Set dark background
+set background=dark
+
+" Set colors
+" :colorscheme base16-flat
+
+" Let Vim use 265 colors
+let base16colorspace=256
