@@ -4,8 +4,6 @@ export ZSH=/home/dallen/.oh-my-zsh
 export EDITOR="vim"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dallen/.gem/ruby/2.2.0/bin"
 
-
-
 ####### ZSH SETTINGS: #######
 
 ZSH_THEME="ys"
@@ -29,6 +27,10 @@ fortune | cowsay -f cat | lolcat
 ### Weather: ###
 echo
 wego 0
+
+### Base16 Shell: ###
+BASE16_SHELL="$HOME/.config/base16-shell/base16-flat.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 
 ####### ALIASES: #######
