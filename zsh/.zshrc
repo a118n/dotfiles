@@ -3,6 +3,7 @@
 export ZSH=/home/dallen/.oh-my-zsh
 export EDITOR="vim"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dallen/.gem/ruby/2.2.0/bin"
+export VDPAU_DRIVER="va_gl"
 
 ####### ZSH SETTINGS: #######
 
@@ -41,6 +42,7 @@ alias cls='clear'
 alias grep='grep --color=auto'
 alias df='df -hT'
 alias updatedb='sudo updatedb'
+alias udevreload='sudo udevadm control --reload'
 
 ### Pacman: ###
 alias upgrade='pacaur -Syu'
