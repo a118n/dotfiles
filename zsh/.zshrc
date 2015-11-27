@@ -3,11 +3,12 @@
 export ZSH=/home/dallen/.oh-my-zsh
 export EDITOR="vim"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dallen/.gem/ruby/2.2.0/bin"
+export VDPAU_DRIVER="va_gl"
 
 ####### ZSH SETTINGS: #######
 
 ZSH_THEME="ys"
-plugins=(git colored-man)
+plugins=(git colored-man zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 ### Options: ###

@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
+Bundle 'vim-ruby/vim-ruby'
 
 call vundle#end() 
 
@@ -32,6 +33,15 @@ set hidden
 
 " Always wrap long lines:
 set wrap
+
+" Some indenting stuff
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+"Visually highlight 80 character column
+set colorcolumn=80
 
 " Set dark background
 set background=dark
