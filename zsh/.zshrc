@@ -42,6 +42,8 @@ alias cls='clear'
 alias grep='grep --color=auto'
 alias df='df -hT'
 alias updatedb='sudo updatedb'
+alias udevreload='sudo udevadm control --reload'
+alias tm='tmux'
 
 ### Pacman: ###
 alias upgrade='pacaur -Syu'
