@@ -3,7 +3,7 @@
 export ZSH=/home/dallen/.oh-my-zsh
 export EDITOR="vim"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dallen/.gem/ruby/2.2.0/bin"
-export VDPAU_DRIVER="va_gl"
+#export VDPAU_DRIVER="va_gl"
 
 ####### ZSH SETTINGS: #######
 
@@ -21,6 +21,16 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:pacaur:*' remote-access false
 #zstyle ':completion:*' menu yes select
 
+### TMUX
+#if which tmux >/dev/null 2>&1; then
+#     #if not inside a tmux session, and if no session is started, start a new session
+#     test -z "$TMUX" && (tmux attach || tmux new-session)
+#       fi
+
+### Base16 Shell: ###
+BASE16_SHELL="$HOME/.config/base16-shell/base16-flat.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 ### Fortune/Cowsay Generator: ###
 #fortune dexter | cowsay -f $(ls /usr/share/cows/ | shuf | head -n 1) | lolcat
 fortune | cowsay -f cat | lolcat
@@ -28,11 +38,6 @@ fortune | cowsay -f cat | lolcat
 ### Weather: ###
 echo
 wego 0
-
-### Base16 Shell: ###
-BASE16_SHELL="$HOME/.config/base16-shell/base16-flat.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
 
 ####### ALIASES: #######
 
@@ -85,5 +90,5 @@ alias playd3='cd /home/dallen/Games/Diablo\ 3/drive_c/Program\ Files/Diablo\ III
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias nvidia-settings='sudo optirun -b none nvidia-settings -c :8'
 alias cowshow='cowsay -l | sed "1d;s/ /\n/g" | while read f; do cowsay -f $f $f; done'
-alias winenew='python ~/Git/scripts/newwineprefix.py'
+alias winenew='ruby ~/Git/Scripts/NewWinePrefix.rb'
 alias flac2mp3='find -name "*.flac" -exec ffmpeg -i {} -acodec libmp3lame -ab 320k {}.mp3 \;'
