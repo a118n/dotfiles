@@ -74,6 +74,7 @@ alias gc='git commit -am'
 alias gp='git push -u origin master'
 
 ### Beets: ###
+alias bimp='ruby ~/Git/Scripts/BeetImport.rb'
 alias bi='beet import'
 alias bf='beet fetchart'
 alias be='beet embedart'
