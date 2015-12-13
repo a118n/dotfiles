@@ -26,7 +26,8 @@ syntax on
 filetype plugin indent on
 
 " Show line numbers
-set number
+"set number
+set relativenumber
 
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
@@ -62,3 +63,13 @@ let g:airline_powerline_fonts = 1
 
 " Press F9 to run current file
 nnoremap <F9> :!%:p<Enter><Enter>
+
+" Highlight current line
+set cursorline
+
+" Highlight matching [{()}]
+set showmatch
+
+" Move vertically by visual line
+nnoremap j gj
+nnoremap k gk
