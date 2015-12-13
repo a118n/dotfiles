@@ -59,3 +59,6 @@ set wildmenu
 
 " Airline settings
 let g:airline_powerline_fonts = 1
+
+" Press F9 to run current file
+nnoremap <F9> :!%:p<Enter><Enter>
