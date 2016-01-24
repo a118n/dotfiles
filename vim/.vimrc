@@ -26,8 +26,8 @@ syntax on
 filetype plugin indent on
 
 " Show line numbers
-"set number
-set relativenumber
+set number
+"set relativenumber
 
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
