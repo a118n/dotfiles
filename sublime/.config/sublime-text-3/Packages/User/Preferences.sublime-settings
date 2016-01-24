@@ -2,7 +2,7 @@
 	"bold_folder_labels": true,
 	"caret_extra_width": 1,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Seti_UI/Scheme/Seti.tmTheme",
+	"color_scheme": "Packages/Seti_UX/Seti.tmTheme",
 	"detect_indentation": true,
 	"draw_indent_guides": true,
 	"enable_telemetry": false,
