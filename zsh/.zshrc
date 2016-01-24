@@ -2,7 +2,7 @@
 
 export ZSH=/home/dallen/.oh-my-zsh
 export EDITOR="vim"
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dallen/.gem/ruby/2.2.0/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dallen/.gem/ruby/2.3.0/bin"
 #export VDPAU_DRIVER="va_gl"
 
 ####### ZSH SETTINGS: #######
@@ -51,7 +51,7 @@ alias udevreload='sudo udevadm control --reload'
 alias tm='tmux'
 
 ### Pacman: ###
-alias upgrade='pacaur -Syu'
+alias upgrade='pacaur -Syu --noconfirm'
 alias lsorphans='pacaur -Qdt'
 alias rmorphans='sudo pacman -Rs $(pacman -Qtdq)'
 alias clearcache='sudo pacman -Scc'
@@ -72,9 +72,10 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit -am'
 alias gp='git push -u origin master'
+alias gco='git checkout --force'
 
 ### Beets: ###
-alias bimp='ruby ~/Git/Scripts/BeetImport.rb'
+alias bimp='ruby ~/Documents/Scripts/bimp.rb'
 alias bi='beet import'
 alias bf='beet fetchart'
 alias be='beet embedart'
@@ -91,5 +92,5 @@ alias playd3='cd /home/dallen/Games/Diablo\ 3/drive_c/Program\ Files/Diablo\ III
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias nvidia-settings='sudo optirun -b none nvidia-settings -c :8'
 alias cowshow='cowsay -l | sed "1d;s/ /\n/g" | while read f; do cowsay -f $f $f; done'
-alias winenew='ruby ~/Git/Scripts/NewWinePrefix.rb'
+alias winenew='ruby ~/Documents/Scripts/wine_new.rb'
 alias flac2mp3='find -name "*.flac" -exec ffmpeg -i {} -acodec libmp3lame -ab 320k {}.mp3 \;'
