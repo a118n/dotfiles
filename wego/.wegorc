@@ -1,6 +1,15 @@
-{
-	"APIKey": "8307b01ec4be918c9ffc5d6408841",
-	"City": "Moscow",
-	"Imperial": false,
-	"Lang": "en"
-}
+# BACKEND to be used
+backend=worldweatheronline.com
+# LOCATION to be queried
+city=Moscow
+# NUMBER of days of weather forecast to be displayed
+days=3
+# FRONTEND to be used
+frontend=ascii-art-table
+# UNITSYSTEM to use for output.
+# Choices are: metric, imperial, si
+units=metric
+# wwo backend: the api KEY to use
+wwo-api-key=8307b01ec4be918c9ffc5d6408841
+# wwo backend: the LANGUAGE to request from wwo
+wwo-lang=en

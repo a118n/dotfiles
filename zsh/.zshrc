@@ -22,10 +22,10 @@ zstyle ':completion:*:pacaur:*' remote-access false
 #zstyle ':completion:*' menu yes select
 
 ### TMUX
-#if which tmux >/dev/null 2>&1; then
-#     #if not inside a tmux session, and if no session is started, start a new session
-#     test -z "$TMUX" && (tmux attach || tmux new-session)
-#       fi
+# if which tmux >/dev/null 2>&1; then
+#      #if not inside a tmux session, and if no session is started, start a new session
+#      test -z "$TMUX" && (tmux attach || tmux new-session)
+#        fi
 
 ### Base16 Shell: ###
 BASE16_SHELL="$HOME/.config/base16-shell/base16-flat.dark.sh"
@@ -85,11 +85,10 @@ alias bs='beet stats'
 
 ### Games/Wine: ###
 #First run optirun zsh, then invoke this alias.
-alias playd3='cd /home/dallen/Games/Diablo\ 3/drive_c/Program\ Files/Diablo\ III/; echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/home/dallen/Games/Diablo 3" setarch i386 -L -B -R -3 wine Diablo\ III.exe > /dev/null 2>&1'
+alias playd3='cd /home/dallen/Games/Diablo\ 3/drive_c/Program\ Files/Diablo\ III/; echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/home/dallen/Games/Diablo 3" wine Diablo\ III.exe > /dev/null 2>&1'
 
 ### Misc: ###
 
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias nvidia-settings='sudo optirun -b none nvidia-settings -c :8'
 alias cowshow='cowsay -l | sed "1d;s/ /\n/g" | while read f; do cowsay -f $f $f; done'
 alias winenew='ruby ~/Documents/Scripts/wine_new.rb'

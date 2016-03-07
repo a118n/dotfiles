@@ -73,3 +73,5 @@ set showmatch
 " Move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+" Set leader key as Space
+let mapleader = "\<Space>"
