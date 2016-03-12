@@ -11,10 +11,11 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
-Plugin 'chriskempson/base16-vim'
+Plugin 'joshdick/onedark.vim'
+Plugin 'joshdick/airline-onedark.vim'
 Bundle 'vim-ruby/vim-ruby'
 
-call vundle#end() 
+call vundle#end()
 
 " Make backspace behave in a sane manner
 set backspace=indent,eol,start
@@ -47,16 +48,16 @@ set colorcolumn=80
 " Set dark background
 set background=dark
 
-" Access colors present in 256 colorspace
-let base16colorspace=256 
+" set t_Co=256
 
 " Set colorscheme
-colorscheme base16-flat
+colorscheme onedark
+let g:airline_theme='onedark'
+let g:onedark_termcolors=256
+" let g:onedark_terminal_italics=1
 
 set laststatus=2
 set wildmenu
-
-" set t_Co=256
 
 " Airline settings
 let g:airline_powerline_fonts = 1
@@ -73,5 +74,6 @@ set showmatch
 " Move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+
 " Set leader key as Space
 let mapleader = "\<Space>"
