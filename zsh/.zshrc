@@ -1,14 +1,14 @@
-###### VARIABLES ######
+###### MY VARIABLES ######
 
-export ZSH=/home/dallen/.oh-my-zsh
 export EDITOR="vim"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dallen/.gem/ruby/2.3.0/bin:/home/dallen/.bin"
-#export VDPAU_DRIVER="va_gl"
 export PANEL_FIFO="/tmp/panel-fifo"
-
+#export VDPAU_DRIVER="va_gl"
 
 ###### ZSH SETTINGS ######
 
+### Oh-My-Zsh ###
+export ZSH=/home/dallen/.oh-my-zsh
 ZSH_THEME="ys"
 plugins=(git colored-man zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
@@ -23,18 +23,14 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:pacaur:*' remote-access false
 zstyle ':completion:*' menu yes select
 
-### TMUX
+### Tmux ###
 # if which tmux >/dev/null 2>&1; then
 #      #if not inside a tmux session, and if no session is started, start a new session
 #      test -z "$TMUX" && (tmux attach || tmux new-session)
 #        fi
 
-### Base16 Shell ###
-BASE16_SHELL="$HOME/.config/base16-shell/base16-flat.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
 ### Fortune/Cowsay Generator ###
-#fortune dexter | cowsay -f $(ls /usr/share/cows/ | shuf | head -n 1) | lolcat
+#fortune | cowsay -f $(ls /usr/share/cows/ | shuf | head -n 1) | lolcat # Random cows
 fortune | cowsay -f cat | lolcat
 
 
@@ -55,14 +51,15 @@ alias mkdir='mkdir -p'
 
 ### Pacman ###
 alias upgrade='pacaur -Syu --noconfirm'
-alias lsorphans='pacaur -Qdt'
-alias rmorphans='sudo pacman -Rs $(pacman -Qtdq)'
-alias clearcache='sudo pacman -Scc'
-alias lsforeign='pacaur -Qm'
-alias pacremove='pacaur -Rcnsu'
+alias pacclear='sudo pacman -Scc'
+alias pacrm='pacaur -Rcnsu'
+alias pacrmo='sudo pacman -Rscnu $(pacman -Qtdq)' # Remove orphans
 alias pacinstall='pacaur -S'
 alias pacsearch='pacaur -Ss'
 alias pacls='pacaur -Qqe'
+alias paclsf='pacaur -Qm' # List all foreign packages
+alias paclso='pacaur -Qdtq' # List all orphaned packages
+alias paclog='. ~/Documents/Scripts/paclog.pl'
 
 ### Systemd ###
 alias start='sudo systemctl start'
@@ -74,7 +71,8 @@ alias status='systemctl status'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -am'
-alias gp='git push -u origin master'
+alias gp='git push'
+alias gpl='git pull'
 alias gco='git checkout --force'
 
 ### Beets ###
@@ -100,6 +98,8 @@ alias winenew='ruby ~/Documents/Scripts/wine_new.rb'
 alias flac2mp3='find -name "*.flac" -exec ffmpeg -i {} -acodec libmp3lame -ab 320k {}.mp3 \;'
 alias porn=' mpv "http://www.pornhub.com/random"'
 alias scloud='mpv --shuffle "https://soundcloud.com/electricdrop-1/likes"'
+alias colors='. ~/Documents/Scripts/colors.sh'
+alias colortest='. ~/Documents/Scripts/colortest'
 
 ###### FUNCTIONS ######
 
