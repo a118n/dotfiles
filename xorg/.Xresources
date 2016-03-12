@@ -1,22 +1,77 @@
-!Color Theme
-#include ".Xcolors/material"
+! clean up urxvt, add keybinds
+URxvt.intensityStyles: false
+URxvt.scrollBar: false
+!URxvt.scrollstyle: plain
+!URxvt.keysym.Shift-Up: command:\033]720;1\007
+!URxvt.keysym.Shift-Down: command:\033]721;1\007
+!URxvt.resize-font.smaller: C-Down
+!URxvt.resize-font.bigger: C-Up
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.cursorBlink: true
+URxvt*saveLines: 5000
 
-urxvt*geometry:				100x40
-urxvt*buffered:				true
-urxvt*cursorBlink:			true
-urxvt*underlineColor:		yellow
-urxvt.font:					xft:Consolas:size=12:antialias=true:hinting=medium
-urxvt*depth:				32
-urxvt*borderless:			1
-urxvt*scrollBar:			false
-urxvt*loginShell:			true
-urxvt*secondaryScroll:		true
-urxvt*saveLines:			5000
-urxvt*termName:				rxvt-unicode
-urxvt*iso14755:				false
-urxvt.perl-ext-common:		default,matcher,clipboard
-urxvt.url-launcher:			firefox
-urxvt.matcher.button:		1
-urxvt*urgentOnBell:			true
-urxvt*visualBell:			false
-urxvt*fading:				30
+! font
+URxvt*font: xft:Droid Sans Mono for Powerline:size=11:antialias=true:hinting=true
+
+! terminal padding
+URxvt.internalBorder: 10
+
+! extensions
+URxvt.perl-ext-common: default,clipboard,vtwheel
+
+! transparency
+URxvt.transparent:	true
+URxvt.shading:		20
+
+! make otf / ttf fonts look pretty.  does not matter if you are using a bitmap font.
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+!Xft.dpi: 96
+
+! colors
+! Base16 Flat
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #2C3E50
+#define base01 #34495E
+#define base02 #7F8C8D
+#define base03 #95A5A6
+#define base04 #BDC3C7
+#define base05 #e0e0e0
+#define base06 #f5f5f5
+#define base07 #ECF0F1
+#define base08 #E74C3C
+#define base09 #E67E22
+#define base0A #F1C40F
+#define base0B #2ECC71
+#define base0C #1ABC9C
+#define base0D #3498DB
+#define base0E #9B59B6
+#define base0F #be643c
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base09
+*.color10:      base01
+*.color11:      base02
+*.color12:      base04
+*.color13:      base06
+*.color14:      base0F
+*.color15:      base07
