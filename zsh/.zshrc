@@ -99,7 +99,6 @@ alias flac2mp3='find -name "*.flac" -exec ffmpeg -i {} -acodec libmp3lame -ab 32
 alias porn=' mpv "http://www.pornhub.com/random"'
 alias scloud='mpv --shuffle "https://soundcloud.com/electricdrop-1/likes"'
 alias colors='. ~/Documents/Scripts/colors.sh'
-alias colortest='. ~/Documents/Scripts/colortest'
 
 ###### FUNCTIONS ######
 

@@ -11,6 +11,9 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-fugitive'
 Plugin 'joshdick/onedark.vim'
 Plugin 'joshdick/airline-onedark.vim'
 Bundle 'vim-ruby/vim-ruby'
@@ -20,6 +23,15 @@ call vundle#end()
 " Make backspace behave in a sane manner
 set backspace=indent,eol,start
 
+" Set default encoding to utf
+set encoding=utf-8
+
+" Set colors to 256
+set t_Co=256
+
+" Set dark background
+set background=dark
+
 " Switch syntax highlighting on
 syntax on
 
@@ -27,10 +39,11 @@ syntax on
 filetype plugin indent on
 
 " Show line numbers
-set number
-"set relativenumber
+" set number
+set relativenumber
 
-" Allow hidden buffers, don't limit to 1 file per window/split
+" Set title and allow hidden buffers
+set title
 set hidden
 
 " Always wrap long lines:
@@ -45,22 +58,16 @@ set expandtab
 "Visually highlight 80 character column
 set colorcolumn=80
 
-" Set dark background
-set background=dark
-
-" set t_Co=256
-
 " Set colorscheme
 colorscheme onedark
 let g:airline_theme='onedark'
 let g:onedark_termcolors=256
-" let g:onedark_terminal_italics=1
+let g:onedark_terminal_italics=1
+
+" hi Normal ctermbg=none  " transparent background
 
 set laststatus=2
 set wildmenu
-
-" Airline settings
-let g:airline_powerline_fonts = 1
 
 " Press F9 to run current file
 nnoremap <F9> :!%:p<Enter><Enter>
@@ -77,3 +84,41 @@ nnoremap k gk
 
 " Set leader key as Space
 let mapleader = "\<Space>"
+
+" Enable mouse support
+set mouse=a
+
+" Open NERDTree with Ctrl+n
+map <C-n> :NERDTreeToggle<CR>
+
+" Open NERDTree automatically
+autocmd vimenter * NERDTree
+" Jump to the main window.
+autocmd VimEnter * wincmd p
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Close NERDTree if no windows open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Auto remove all trailing whitespace on :w
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Backup and Swap
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Improves redrawing
+set ttyfast
+
+" No delay when switching between modes
+set timeoutlen=0
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" Airline settings
+let g:airline#extensions#tabline#enabled = 1 "Show all buffers if one window
+let g:airline_powerline_fonts = 1
