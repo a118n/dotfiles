@@ -11,9 +11,14 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'tpope/vim-fugitive'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'joshdick/onedark.vim'
 Plugin 'joshdick/airline-onedark.vim'
 Bundle 'vim-ruby/vim-ruby'
@@ -61,7 +66,6 @@ set colorcolumn=80
 " Set colorscheme
 colorscheme onedark
 let g:airline_theme='onedark'
-let g:onedark_termcolors=256
 let g:onedark_terminal_italics=1
 
 " hi Normal ctermbg=none  " transparent background
@@ -93,6 +97,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Open NERDTree automatically
 autocmd vimenter * NERDTree
+
 " Jump to the main window.
 autocmd VimEnter * wincmd p
 autocmd StdinReadPre * let s:std_in=1
@@ -109,6 +114,11 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Undo changes even after reopening file
+set undofile
+set undodir=~/.vim/undodir
+
+
 " Improves redrawing
 set ttyfast
 
@@ -122,3 +132,5 @@ set splitright
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1 "Show all buffers if one window
 let g:airline_powerline_fonts = 1
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
