@@ -30,8 +30,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  done
  unset f
 fi
+
 # My shit
-source ~/toggle_screen.sh
 feh --bg-scale ~/.wallpaper.png &
 sxhkd &
 compton --config ~/.compton.conf -b &
