@@ -133,5 +133,8 @@ set splitright
 let g:airline#extensions#tabline#enabled = 1 "Show all buffers if one window
 let g:airline_powerline_fonts = 1
 
-"Enable True Color in NeoVim
+" Enable True Color in NeoVim
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Disable double width in devicons
+let g:WebDevIconsUnicodeGlyphDoubleWidth=0
