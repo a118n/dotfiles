@@ -97,7 +97,7 @@ alias nvidia-settings='sudo optirun -b none nvidia-settings -c :8'
 alias cowshow='cowsay -l | sed "1d;s/ /\n/g" | while read f; do cowsay -f $f $f; done'
 alias winenew='ruby ~/Documents/Scripts/wine_new.rb'
 alias flac2mp3='find -name "*.flac" -exec ffmpeg -i {} -acodec libmp3lame -ab 320k {}.mp3 \;'
-alias porn=' mpv "http://www.pornhub.com/random"'
+alias porn=' mpv --no-resume-playback "http://www.pornhub.com/random"'
 alias scloud='mpv --shuffle "https://soundcloud.com/electricdrop-1/likes"'
 alias colors='. ~/Documents/Scripts/colors.sh'
 

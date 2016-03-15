@@ -92,8 +92,8 @@ let mapleader = "\<Space>"
 " Enable mouse support
 set mouse=a
 
-" Open NERDTree with Ctrl+n
-map <C-n> :NERDTreeToggle<CR>
+" Open NERDTree with Ctrl+t
+map <C-t> :NERDTreeToggle<CR>
 
 " Open NERDTree automatically
 autocmd vimenter * NERDTree
