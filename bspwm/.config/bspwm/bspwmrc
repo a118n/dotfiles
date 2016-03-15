@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # Border and window gap
-bspc config border_width       3
+bspc config border_width       2
 bspc config window_gap         15
 
 # Add some padding on top for the panel
