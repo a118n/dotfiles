@@ -1,29 +1,3 @@
-! URXVT Settings
-URxvt.intensityStyles: false
-URxvt.scrollBar: false
-! URxvt.scrollstyle: plain
-! URxvt.keysym.Shift-Up: command:\033]720;1\007
-! URxvt.keysym.Shift-Down: command:\033]721;1\007
-! URxvt.resize-font.smaller: C-Down
-! URxvt.resize-font.bigger: C-Up
-URxvt.iso14755: false
-URxvt.iso14755_52: false
-URxvt.cursorBlink: true
-URxvt*saveLines: 5000
-
-! Font
-URxvt*font: xft:Droid Sans Mono for Powerline:size=12:antialias=true:hinting=true
-
-! Padding
-URxvt.internalBorder: 0
-
-! Extensions
-URxvt.perl-ext-common: default,clipboard,vtwheel
-
-! Transparency
-! URxvt.transparent:	true
-! URxvt.shading:		20
-
 ! Pretty up fonts
 Xft.antialias: 1
 Xft.autohint: 0

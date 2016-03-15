@@ -1,12 +1,8 @@
 ###### MY VARIABLES ######
-
 export EDITOR="nvim"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dallen/.gem/ruby/2.3.0/bin:/home/dallen/.bin"
-export PANEL_FIFO="/tmp/panel-fifo"
-#export VDPAU_DRIVER="va_gl"
 
 ###### ZSH SETTINGS ######
-
 ### Oh-My-Zsh ###
 export ZSH=/home/dallen/.oh-my-zsh
 ZSH_THEME="ys"

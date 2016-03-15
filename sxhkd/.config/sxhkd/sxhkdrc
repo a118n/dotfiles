@@ -1,3 +1,33 @@
+XF86AudioRaiseVolume
+	amixer set Master 2%+
+
+XF86AudioLowerVolume
+	amixer set Master 2%-
+
+XF86AudioMute
+	amixer set Master toggle
+
+XF86MonBrightnessUp
+	xbacklight -inc 10%
+
+XF86MonBrightnessDown
+	xbacklight -dec 10%
+
+# XF86AudioPlay
+# 	mpc toggle
+#
+# XF86AudioNext
+# 	mpc next
+#
+# XF86AudioPrev
+# 	mpc prev
+
+XF86KbdBrightnessUp
+	kbdlight up
+
+XF86KbdBrightnessDown
+	kbdlight down
+
 #
 # bspwm hotkeys
 #
