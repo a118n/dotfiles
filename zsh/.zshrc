@@ -39,7 +39,7 @@ fortune | cowsay -f cat | lolcat
 ### General ###
 alias ls='ls -lash --color'
 alias cls='clear'
-alias grep='grep --color'
+alias grep='grep -i --color'
 alias df='df -hT'
 alias updatedb='sudo updatedb'
 alias udevrel='sudo udevadm control --reload'
