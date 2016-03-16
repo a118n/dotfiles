@@ -23,10 +23,13 @@ XF86MonBrightnessDown
 # 	mpc prev
 
 XF86KbdBrightnessUp
-	kbdlight up
+	backlight up
 
 XF86KbdBrightnessDown
-	kbdlight down
+	backlight down
+
+XF86Calculator
+  gnome-calculator
 
 #
 # bspwm hotkeys
@@ -117,7 +120,7 @@ super + button{4,5}
 
 # Volume
 super + {Down,Up}
-    amixer -q set Master 3%{-,+}
+    amixer -q set Master 2%{-,+}
 
 # Terminal
 super + Return
