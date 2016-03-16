@@ -45,6 +45,9 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -p'
 alias vim='nvim'
+alias pt='sudo powertop'
+alias wifi='sudo wifi'
+alias bt='sudo bluetooth'
 
 ### Pacman ###
 alias upgrade='pacaur -Syu --noconfirm'
