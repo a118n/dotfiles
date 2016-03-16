@@ -1,0 +1,42 @@
+[options]
+  resize_grip = false
+  scroll_on_output = false
+  scroll_on_keystroke = true
+  audible_bell = false
+  visible_bell = false
+  mouse_autohide = true
+  allow_bold = true
+  dynamic_title = true
+  urgent_on_bell = true
+  clickable_url = true
+  font = Droid Sans Mono for Powerline 10
+  scrollback_lines = 7000
+  search_wrap = true
+  cursor_blink = on
+  cursor_shape = ibeam
+  browser = google-chrome-stable
+
+[colors]
+  foreground = #ABB2BF
+  #foreground_bold = #ffffff
+  #foreground_dim = #888888
+  background = rgba(40, 44, 52, 0.85)
+  cursor = #ABB2BF
+  highlight = #ABB2BF
+
+  color0 = #000000
+  color1 = #E06C75
+  color2 = #98C379
+  color3 = #D19A66
+  color4 = #62AFEE
+  color5 = #C678DD
+  color6 = #56B6C2
+  color7 = #ABB2BF
+  color8 = #5C6370
+  color9 = #E06C75
+  color10 = #98C379
+  color11 = #D19A66
+  color12 = #62AFEE
+  color13 = #C678DD
+  color14 = #56B6C2
+  color15 = #FFFFFF
