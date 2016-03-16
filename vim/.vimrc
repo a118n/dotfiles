@@ -96,15 +96,15 @@ set mouse=a
 map <C-t> :NERDTreeToggle<CR>
 
 " Open NERDTree automatically and jump to the main window
-autocmd vimenter * NERDTree
-autocmd VimEnter * wincmd p
+" autocmd vimenter * NERDTree
+" autocmd VimEnter * wincmd p
 
 " Open NERDTree if no file opened
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close NERDTree if no windows open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Auto remove all trailing whitespace on :w
 autocmd BufWritePre * :%s/\s\+$//e
