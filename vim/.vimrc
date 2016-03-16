@@ -118,6 +118,8 @@ set noswapfile
 set undofile
 set undodir=~/.vim/undodir
 
+" Always use clipboard
+set clipboard+=unnamedplus
 
 " Improves redrawing
 set ttyfast
