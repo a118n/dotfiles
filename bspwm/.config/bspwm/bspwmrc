@@ -23,6 +23,7 @@ bspc monitor -d $(echo '\uf120') $(echo '\uf268') $(echo '\uf219') $(echo '\uf03
 
 # Rules
 bspc rule -a thunar floating=on border=off
+bspc rule -a nautilus floating=on border=off
 bspc rule -a atom desktop=^3 border=off
 bspc rule -a google-chrome desktop=^2 border=off
 bspc rule -a Steam desktop=^6 border=off floating=on

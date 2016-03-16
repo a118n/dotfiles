@@ -121,7 +121,7 @@ super + {Down,Up}
 
 # Terminal
 super + Return
-	gnome-terminal
+  termite
 
 # Web Browser
 super + g
