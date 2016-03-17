@@ -20,7 +20,7 @@
   foreground = #ABB2BF
   #foreground_bold = #ffffff
   #foreground_dim = #888888
-    background = rgba(40, 44, 52, 0.88)
+  background = rgba(40, 44, 52, 0.88)
   cursor = #ABB2BF
   highlight = #ABB2BF
 

@@ -28,7 +28,7 @@ done > "$PANEL_FIFO" &
 
 # Date
 while true;
-do echo 'D\uf073' $(date +'%b %d')
+do echo 'D\uf073' $(date +'%a %b %d')
 	sleep 5
 done > $PANEL_FIFO &
 
