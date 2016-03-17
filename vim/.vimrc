@@ -100,8 +100,8 @@ map <C-t> :NERDTreeToggle<CR>
 " autocmd VimEnter * wincmd p
 
 " Open NERDTree if no file opened
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close NERDTree if no windows open
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -115,8 +115,8 @@ set nowritebackup
 set noswapfile
 
 " Undo changes even after reopening file
-set undofile
-set undodir=~/.vim/undodir
+" set undofile
+" set undodir=~/.vim/undodir
 
 " Always use clipboard
 set clipboard+=unnamedplus
