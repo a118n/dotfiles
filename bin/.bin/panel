@@ -38,20 +38,28 @@ do
 BATT_LEVEL=$(acpi -b | grep -o '[[:digit:]]\+%' | sed 's/%//')
 	if [ $BATT_LEVEL -ge 80 ]
 		then
-			echo 'B\uf116' $BATT_LEVEL%
+			echo 'B\uf240' $BATT_LEVEL%
 	fi
 
-	if [ $BATT_LEVEL -ge 30 -a $BATT_LEVEL -lt 80 ]
+	if [ $BATT_LEVEL -ge 60 -a $BATT_LEVEL -lt 80 ]
 		then
-			echo 'B\uf117' $BATT_LEVEL%
+			echo 'B\uf241' $BATT_LEVEL%
 	fi
 
-	if [ $BATT_LEVEL -lt 30 ]
+	if [ $BATT_LEVEL -ge 40 -a $BATT_LEVEL -lt 60 ]
 		then
-			echo 'B%{T3}\uf115%{T1}' $BATT_LEVEL%
+			echo 'B\uf242' $BATT_LEVEL%
 	fi
 
+	if [ $BATT_LEVEL -ge 20 -a $BATT_LEVEL -lt 40 ]
+		then
+			echo 'B\uf243' $BATT_LEVEL%
+	fi
 
+	if [ $BATT_LEVEL -lt 20 ]
+		then
+			echo 'B%{T3}\uf244%{T1}' $BATT_LEVEL%
+	fi
 	sleep 30;
 done > "$PANEL_FIFO" &
 
