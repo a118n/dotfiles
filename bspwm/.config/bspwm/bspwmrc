@@ -22,10 +22,9 @@ bspc config focused_frame_opacity 0.1
 bspc monitor -d $(echo '\uf120') $(echo '\uf268') $(echo '\uf219') $(echo '\uf03d') $(echo '\uf108') $(echo '\uf11b') $(echo '\uf0e7')
 
 # Rules
-bspc rule -a thunar floating=on border=off
-bspc rule -a nautilus floating=on border=off
+bspc rule -a nautilus state=floating border=off
 bspc rule -a atom desktop=^3 border=off
 bspc rule -a google-chrome desktop=^2 border=off
-bspc rule -a Steam desktop=^6 border=off floating=on
+bspc rule -a Steam desktop=^6 border=off state=floating
 
 panel &
