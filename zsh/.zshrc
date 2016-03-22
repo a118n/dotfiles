@@ -5,7 +5,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin
 ###### ZSH SETTINGS ######
 ### Oh-My-Zsh ###
 export ZSH=/home/dallen/.oh-my-zsh
-ZSH_THEME="ys"
+ZSH_THEME="honukai"
 plugins=(git colored-man zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
