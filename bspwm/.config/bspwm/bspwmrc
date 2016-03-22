@@ -15,7 +15,7 @@ bspc config focus_follows_pointer true
 # Colors and opacity of borders
 bspc config normal_border_color "#282c34"
 bspc config focused_border_color "#5C6370"
-bspc config presel_border_color "#C678DD"
+bspc config presel_feedback_color "#C678DD"
 bspc config normal_frame_opacity 0.0
 bspc config focused_frame_opacity 0.1
 
@@ -23,7 +23,7 @@ bspc monitor -d $(echo '\uf120') $(echo '\uf268') $(echo '\uf219') $(echo '\uf03
 
 # Rules
 bspc rule -a nautilus state=floating border=off
-bspc rule -a atom desktop=^3 border=off
+bspc rule -a Atom desktop=^3 border=off
 bspc rule -a google-chrome desktop=^2 border=off
 bspc rule -a Steam desktop=^6 border=off state=floating
 
