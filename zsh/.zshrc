@@ -5,7 +5,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin
 ###### ZSH SETTINGS ######
 ### Oh-My-Zsh ###
 export ZSH=/home/dallen/.oh-my-zsh
-ZSH_THEME="honukai"
+ZSH_THEME="spaceship"
 plugins=(git colored-man zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
@@ -88,6 +88,7 @@ alias bs='beet stats'
 
 #First run optirun zsh, then invoke this alias.
 alias playd3='cd /home/dallen/Games/Diablo\ 3/drive_c/Program\ Files\ \(x86\)/Diablo\ III/; echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/home/dallen/Games/Diablo 3" wine Diablo\ III.exe > /dev/null 2>&1'
+alias torment='cd /home/dallen/Games/Planescape\ Torment/drive_c/GOG\ Games/Planescape\ Torment; env WINEPREFIX=/home/dallen/Games/Planescape\ Torment wine Torment.exe'
 
 ### Misc ###
 alias weather='wego 0'
@@ -98,7 +99,7 @@ alias winenew='ruby ~/Documents/Scripts/wine_new.rb'
 alias flac2mp3='find -name "*.flac" -exec ffmpeg -i {} -acodec libmp3lame -ab 320k {}.mp3 \;'
 alias porn=' mpv --no-resume-playback "http://www.pornhub.com/random"'
 alias scloud='mpv --shuffle "https://soundcloud.com/electricdrop-1/likes"'
-alias colors='. ~/Documents/Scripts/colors.sh'
+alias compress='tar cvzf'
 
 ###### FUNCTIONS ######
 
