@@ -1,0 +1,23 @@
+#! /usr/bin/env ruby
+
+require 'pathname'
+require 'colorize'
+
+puts "\nWelcome to BIMP -  The Beets Importer!".blue
+
+abort(("Beets executable not found! Exiting...").red) if `which beet`.empty?
+
+def import(dir)
+  folder = dir.split('/')[-1]
+  puts "\nImporting: ".green + folder.yellow
+  artist = folder.gsub(/[!@%&"]/,'')
+  `beet import "#{dir}" && beet fetchart #{artist} && beet embedart #{artist}`
+end
+
+folders = Pathname.new(Dir.pwd)
+          .children.select(&:directory?)
+                   .map(&:to_s)
+
+folders.each { |f| import(f) }
+
+puts "\nFinished!".green

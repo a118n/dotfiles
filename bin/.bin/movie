@@ -1,0 +1,29 @@
+#! /usr/bin/env ruby
+
+require 'imdb'
+require 'colorize'
+
+print "What are you looking for? ".yellow
+
+name = gets.chomp
+
+search = Imdb::Search.new(name)
+
+if search.movies.any?
+  puts "\nHere's what I found:".blue
+  search.movies.each_with_index { |m, i| puts "#{[i+1]}: #{m.title}" }
+  print "\nInput a number to view details: ".blue
+  n = gets.chomp.to_i
+  movie = search.movies[n-1]
+
+  puts "\n#{movie.title}"
+  puts "\nRating: #{movie.rating}"
+  puts "\nGenres: #{movie.genres.join(", ")}"
+  puts "\nDirector: #{movie.director.join(", ")}"
+  puts "\nCast: #{movie.cast_members.take(10).join(", ")}"
+  puts "\nPlot: #{movie.plot}"
+
+else
+  puts "\nUnforunately, I wasn't able to find anything with this name.".red
+  exit
+end
