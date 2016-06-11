@@ -1,9 +1,9 @@
 #! /usr/bin/zsh
 
 PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=30
-PANEL_FONT_FAMILY="Noto Sans UI:size=12"
-ICON_FONT="FontAwesome:size=14"
+PANEL_HEIGHT=24
+PANEL_FONT_FAMILY="Noto Sans UI:size=10"
+ICON_FONT="FontAwesome:size=12"
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then
 	printf "%s\n" "The panel is already running." >&2

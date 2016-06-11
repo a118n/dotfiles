@@ -32,7 +32,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 # My shit
-feh --bg-scale ~/.wallpaper.png &
+feh --bg-scale ~/.wallpaper &
 sxhkd &
 compton --config ~/.compton.conf -b &
 xsetroot -cursor_name left_ptr &

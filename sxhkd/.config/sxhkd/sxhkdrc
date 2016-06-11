@@ -135,7 +135,11 @@ super + g
 
 # Dmenu
 super + space
-  dmenu_run -fn 'Noto Sans-12' -nb "#282c34" -nf "#ABB2BF" -sb "#FFFFFF" -sf "#282c34"
+  dmenu_run -fn 'Noto Sans UI-10' -nb "#282c34" -nf "#ABB2BF" -sb "#FFFFFF" -sf "#282c34"
+
+# File manager
+super + n
+  nautilus
 
 # make sxhkd reload its configuration files:
 super + Escape

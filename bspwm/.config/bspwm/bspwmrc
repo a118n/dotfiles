@@ -1,7 +1,7 @@
 #! /usr/bin/zsh
 
 # Border and window gap
-bspc config border_width       2
+bspc config border_width       4
 bspc config window_gap         15
 
 # Add some padding on top for the panel
@@ -16,14 +16,14 @@ bspc config focus_follows_pointer true
 bspc config normal_border_color "#282c34"
 bspc config focused_border_color "#5C6370"
 bspc config presel_feedback_color "#C678DD"
+
 bspc config normal_frame_opacity 0.0
 bspc config focused_frame_opacity 0.1
 
 bspc monitor -d $(echo '\uf120') $(echo '\uf268') $(echo '\uf219') $(echo '\uf03d') $(echo '\uf108') $(echo '\uf11b') $(echo '\uf0e7')
 
 # Rules
-bspc rule -a nautilus state=floating border=off
-bspc rule -a Atom desktop=^3 border=off
+bspc rule -a Nautilus state=floating border=off
 bspc rule -a google-chrome desktop=^2 border=off
 bspc rule -a Steam desktop=^6 border=off state=floating
 
