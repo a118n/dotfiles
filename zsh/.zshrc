@@ -1,6 +1,6 @@
 ###### MY VARIABLES ######
 export EDITOR="nvim"
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/dallen/.gem/ruby/2.3.0/bin:/home/dallen/.bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$(ruby -e "print Gem.user_dir")/bin:/home/dallen/.bin"
 
 ###### ZSH SETTINGS ######
 ### Oh-My-Zsh ###
@@ -45,9 +45,6 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -p'
 alias vim='nvim'
-alias pt='sudo powertop'
-alias wifi='sudo wifi'
-alias bt='sudo bluetooth'
 
 ### Pacman ###
 alias upgrade='pacaur -Syu --noconfirm'
@@ -59,7 +56,6 @@ alias pacsearch='pacaur -Ss'
 alias pacls='pacaur -Qqe'
 alias paclsf='pacaur -Qm' # List all foreign packages
 alias paclso='pacaur -Qdtq' # List all orphaned packages
-alias paclog='. ~/Documents/Scripts/paclog.pl'
 
 ### Systemd ###
 alias start='sudo systemctl start'
@@ -76,7 +72,6 @@ alias gpl='git pull'
 alias gco='git checkout --force'
 
 ### Beets ###
-alias bimp='ruby ~/Documents/Scripts/bimp.rb'
 alias bi='beet import'
 alias bf='beet fetchart'
 alias be='beet embedart'
@@ -88,7 +83,7 @@ alias bs='beet stats'
 
 #First run optirun zsh, then invoke this alias.
 alias playd3='cd /home/dallen/Games/Diablo\ 3/drive_c/Program\ Files\ \(x86\)/Diablo\ III/; echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/home/dallen/Games/Diablo 3" wine Diablo\ III.exe > /dev/null 2>&1'
-alias torment='cd /home/dallen/Games/Planescape\ Torment/drive_c/GOG\ Games/Planescape\ Torment; env WINEPREFIX=/home/dallen/Games/Planescape\ Torment wine Torment.exe'
+alias fixsteam='find ~/.steam/root/ \( -name "libgcc_s.so*" -o -name "libstdc++.so*" -o -name "libxcb.so*" -o -name "libgpg-error.so*" \) -print -delete'
 
 ### Misc ###
 alias weather='wego 0'
@@ -99,7 +94,7 @@ alias winenew='ruby ~/Documents/Scripts/wine_new.rb'
 alias flac2mp3='find -name "*.flac" -exec ffmpeg -i {} -acodec libmp3lame -ab 320k {}.mp3 \;'
 alias porn=' mpv --no-resume-playback "http://www.pornhub.com/random"'
 alias scloud='mpv --shuffle "https://soundcloud.com/electricdrop-1/likes"'
-alias compress='tar cvzf'
+alias compress='tar -cvzf'
 
 ###### FUNCTIONS ######
 
