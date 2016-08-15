@@ -1,6 +1,6 @@
 ###### MY VARIABLES ######
 export EDITOR="nvim"
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$(ruby -e "print Gem.user_dir")/bin:/home/dallen/.bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$(ruby -e "print Gem.user_dir")/bin:/home/dallen/.bin:/home/dallen/.scripts/"
 
 ###### ZSH SETTINGS ######
 ### Oh-My-Zsh ###
@@ -90,7 +90,6 @@ alias weather='wego 0'
 alias xrel='xrdb ~/.Xresources'
 alias nvidia-settings='sudo optirun -b none nvidia-settings -c :8'
 alias cowshow='cowsay -l | sed "1d;s/ /\n/g" | while read f; do cowsay -f $f $f; done'
-alias winenew='ruby ~/Documents/Scripts/wine_new.rb'
 alias flac2mp3='find -name "*.flac" -exec ffmpeg -i {} -acodec libmp3lame -ab 320k {}.mp3 \;'
 alias porn=' mpv --no-resume-playback "http://www.pornhub.com/random"'
 alias scloud='mpv --shuffle "https://soundcloud.com/electricdrop-1/likes"'
