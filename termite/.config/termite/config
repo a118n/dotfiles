@@ -9,7 +9,7 @@
   dynamic_title = true
   urgent_on_bell = true
   clickable_url = true
-  font = Droid Sans Mono for Powerline 10
+  font = Input Mono Narrow 10
   scrollback_lines = 7000
   search_wrap = true
   cursor_blink = on
@@ -17,27 +17,23 @@
   browser = google-chrome-stable
 
 [colors]
-  foreground = #ABB2BF
-  #foreground_bold = #ffffff
-  #foreground_dim = #888888
-  background = rgba(40, 44, 52, 1)
-
-  cursor = #ABB2BF
-  highlight = #ABB2BF
-
+  foreground = #9aa7bd
+  background = #1b202a
+  cursor = #9aa7bd
+  highlight = #51617d
   color0 = #000000
-  color1 = #E06C75
-  color2 = #98C379
-  color3 = #D19A66
-  color4 = #62AFEE
-  color5 = #C678DD
-  color6 = #56B6C2
-  color7 = #ABB2BF
-  color8 = #5C6370
-  color9 = #E06C75
-  color10 = #98C379
-  color11 = #D19A66
-  color12 = #62AFEE
-  color13 = #C678DD
-  color14 = #56B6C2
+  color1 = #b15e7c
+  color2 = #709d6c
+  color3 = #b5a262
+  color4 = #608cc3
+  color5 = #8f72bf
+  color6 = #56adb7
+  color7 = #323c4d
+  color8 = #2a3341
+  color9 = #b15e7c
+  color10 = #709d6c
+  color11 = #b5a262
+  color12 = #608cc3
+  color13 = #8f72bf
+  color14 = #56adb7
   color15 = #FFFFFF
