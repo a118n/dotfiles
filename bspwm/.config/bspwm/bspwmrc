@@ -25,7 +25,7 @@ bspc monitor -d $(echo '\uf120') $(echo '\uf268') $(echo '\uf219') $(echo '\uf12
 # Rules
 bspc rule -a Nautilus state=floating border=off
 bspc rule -a google-chrome desktop=^2 border=off
-bspc rule -a Steam desktop=^6 border=off state=floating
+bspc rule -a Steam desktop=^7 border=off state=floating
 bspc rule -a Atom desktop=^4 border=off
 
 panel &
