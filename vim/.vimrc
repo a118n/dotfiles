@@ -8,7 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " Vundle plugins
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
@@ -19,10 +18,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'joshdick/onedark.vim'
-Plugin 'joshdick/airline-onedark.vim'
-Bundle 'vim-ruby/vim-ruby'
-
+Plugin 'tyrannicaltoucan/vim-deep-space.git'
 call vundle#end()
 
 " Make backspace behave in a sane manner
@@ -33,9 +29,6 @@ set encoding=utf-8
 
 " Set colors to 256
 set t_Co=256
-
-" Set dark background
-set background=dark
 
 " Switch syntax highlighting on
 syntax on
@@ -64,8 +57,9 @@ set expandtab
 set colorcolumn=80
 
 " Set colorscheme
-colorscheme onedark
-let g:airline_theme='onedark'
+set background=dark " Set dark background
+colorscheme deep-space
+let g:airline_theme='deep_space'
 let g:onedark_terminal_italics=1
 
 " hi Normal ctermbg=none  " transparent background
