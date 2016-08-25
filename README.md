@@ -4,5 +4,4 @@ My current Arch Linux setup. I use [stow](https://www.gnu.org/software/stow/) to
 * Terminal and other colors are Deep Space as well.
 * Font is [Iosevka](https://be5invis.github.io/Iosevka/)
 
-
 ![scrot of current desktop](screenshot.png)
