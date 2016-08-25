@@ -1,8 +1,8 @@
 #! /usr/bin/zsh
 
 PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=24
-PANEL_FONT_FAMILY="Noto Sans UI:size=10"
+PANEL_HEIGHT=26
+PANEL_FONT_FAMILY="Iosevka Term:size=12"
 ICON_FONT="FontAwesome:size=12"
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then
@@ -94,8 +94,8 @@ done > $PANEL_FIFO &
 while true;
 do
 WIFI_SSID=$(iw wlp4s0 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//')
-WIFI_SIGNAL=$(iw wlp4s0 link | grep 'signal' | sed 's/signal: //' | sed 's/ dBm//' | sed 's/\t//')
-	echo L'\uf1eb' $WIFI_SSID '|' $WIFI_SIGNAL
+# WIFI_SIGNAL=$(iw wlp4s0 link | grep 'signal' | sed 's/signal: //' | sed 's/ dBm//' | sed 's/\t//')
+	echo L'\uf1eb' $WIFI_SSID # '|' $WIFI_SIGNAL
 	sleep 10
 done > $PANEL_FIFO &
 

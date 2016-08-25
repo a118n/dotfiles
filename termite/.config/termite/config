@@ -9,7 +9,7 @@
   dynamic_title = true
   urgent_on_bell = true
   clickable_url = true
-  font = Input Mono Narrow 10
+  font = Iosevka Term 12
   scrollback_lines = 7000
   search_wrap = true
   cursor_blink = on

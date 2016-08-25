@@ -135,7 +135,7 @@ super + g
 
 # Dmenu
 super + space
-  dmenu_run -fn 'Input Mono Narrow-10' -nb "#1b202a" -nf "#9aa7bd" -sb "#FFFFFF" -sf "#1b202a"
+  dmenu_run -fn 'Iosevka Term-14' -nb "#1b202a" -nf "#9aa7bd" -sb "#FFFFFF" -sf "#1b202a"
 
 # File manager
 super + n
