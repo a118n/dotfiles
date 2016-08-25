@@ -19,6 +19,14 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:pacaur:*' remote-access false
 zstyle ':completion:*' menu yes select
 
+### SSH ###
+if ! pgrep -u $USER ssh-agent; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval $(<~/.ssh-agent-thing)
+fi
+
 ### Tmux ###
 # if which tmux >/dev/null 2>&1; then
 #      #if not inside a tmux session, and if no session is started, start a new session
