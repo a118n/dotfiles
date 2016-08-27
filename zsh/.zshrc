@@ -20,7 +20,7 @@ zstyle ':completion:*:pacaur:*' remote-access false
 zstyle ':completion:*' menu yes select
 
 ### SSH ###
-if ! pgrep -u $USER ssh-agent; then
+if ! pgrep -u $USER ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-thing
 fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
