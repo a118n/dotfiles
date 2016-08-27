@@ -20,12 +20,7 @@ zstyle ':completion:*:pacaur:*' remote-access false
 zstyle ':completion:*' menu yes select
 
 ### SSH ###
-if ! pgrep -u $USER ssh-agent > /dev/null; then
-    ssh-agent > ~/.ssh-agent-thing
-fi
-if [[ "$SSH_AGENT_PID" == "" ]]; then
-    eval $(<~/.ssh-agent-thing)
-fi
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 ### Tmux ###
 # if which tmux >/dev/null 2>&1; then
