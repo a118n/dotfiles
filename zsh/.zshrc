@@ -36,11 +36,10 @@ fortune | cowsay -f cat | lolcat
 ###### ALIASES ######
 
 ### General ###
-alias ls='ls -lash --color'
+alias ll='ls -lash --color'
 alias cls='clear'
 alias grep='grep --color'
 alias df='df -hT'
-alias updatedb='sudo updatedb'
 alias udevrel='sudo udevadm control --reload'
 alias tm='tmux'
 alias rm='rm -iv'
@@ -48,6 +47,7 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -p'
 alias vim='nvim'
+alias rs10='rsync -av --bwlimit=10M --progress'
 
 ### Pacman ###
 alias upgrade='pacaur -Syu --noconfirm'
@@ -69,6 +69,7 @@ alias status='systemctl status'
 ### Git ###
 alias gs='git status'
 alias ga='git add'
+alias gd='git diff'
 alias gc='git commit -am'
 alias gp='git push'
 alias gpl='git pull'
@@ -85,7 +86,7 @@ alias bs='beet stats'
 ### Games/Wine ###
 
 #First run optirun zsh, then invoke this alias.
-alias playd3='cd /home/dallen/Games/Diablo\ 3/drive_c/Program\ Files\ \(x86\)/Diablo\ III/; echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/home/dallen/Games/Diablo 3" wine Diablo\ III.exe > /dev/null 2>&1'
+alias playd3='cd /home/dallen/Games/Diablo\ 3/drive_c/Program\ Files/Diablo\ III/; echo "Running Diablo III: Reaper of Souls"; env LANG="ru_RU.UTF-8" env WINEPREFIX="/home/dallen/Games/Diablo 3" wine Diablo\ III.exe > /dev/null 2>&1'
 alias fixsteam='find ~/.steam/root/ \( -name "libgcc_s.so*" -o -name "libstdc++.so*" -o -name "libxcb.so*" -o -name "libgpg-error.so*" \) -print -delete'
 
 ### Misc ###
