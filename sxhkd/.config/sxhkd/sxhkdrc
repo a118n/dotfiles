@@ -131,7 +131,7 @@ super + Return
 
 # Web Browser
 super + g
-  google-chrome-stable
+  /usr/bin/google-chrome-stable %U
 
 # Dmenu
 super + space

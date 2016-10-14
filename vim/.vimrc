@@ -133,4 +133,4 @@ let g:airline_powerline_fonts = 1
 set termguicolors
 
 " Disable double width in devicons
-let g:WebDevIconsUnicodeGlyphDoubleWidth=0
+" let g:WebDevIconsUnicodeGlyphDoubleWidth=0
