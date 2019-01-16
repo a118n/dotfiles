@@ -1,25 +1,12 @@
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'haishanh/night-owl.vim'
+call plug#end()
+
 " Use Vim settings rather than Vi
 set nocompatible
 
 filetype off
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-
-" Vundle plugins
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'bling/vim-airline'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tyrannicaltoucan/vim-deep-space.git'
-call vundle#end()
 
 " Make backspace behave in a sane manner
 set backspace=indent,eol,start
@@ -29,6 +16,13 @@ set encoding=utf-8
 
 " Set colors to 256
 set t_Co=256
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Set colorscheme
+set background=dark
+colorscheme night-owl
 
 " Switch syntax highlighting on
 syntax on
@@ -48,30 +42,19 @@ set hidden
 set wrap
 
 " Some indenting stuff
-set smartindent
+set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
 
-"Visually highlight 80 character column
-set colorcolumn=80
-
-" Set colorscheme
-set background=dark " Set dark background
-colorscheme deep-space
-let g:airline_theme='deep_space'
-let g:onedark_terminal_italics=1
-
-" hi Normal ctermbg=none  " transparent background
+" Visually highlight 80 character column
+" set colorcolumn=80
 
 set laststatus=2
 set wildmenu
 
-" Press F9 to run current file
-nnoremap <F9> :!%:p<Enter><Enter>
-
 " Highlight current line
-set cursorline
+" set cursorline
 
 " Highlight matching [{()}]
 set showmatch
@@ -83,23 +66,6 @@ nnoremap k gk
 " Set leader key as Space
 let mapleader = "\<Space>"
 
-" Enable mouse support
-set mouse=a
-
-" Open NERDTree with Ctrl+t
-map <C-t> :NERDTreeToggle<CR>
-
-" Open NERDTree automatically and jump to the main window
-" autocmd vimenter * NERDTree
-" autocmd VimEnter * wincmd p
-
-" Open NERDTree if no file opened
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" Close NERDTree if no windows open
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 " Auto remove all trailing whitespace on :w
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -107,13 +73,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 set nobackup
 set nowritebackup
 set noswapfile
-
-" Undo changes even after reopening file
-" set undofile
-" set undodir=~/.vim/undodir
-
-" Always use clipboard
-set clipboard+=unnamedplus
 
 " Improves redrawing
 set ttyfast
@@ -128,9 +87,3 @@ set splitright
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1 "Show all buffers if one window
 let g:airline_powerline_fonts = 1
-
-" Enable True Color in NeoVim
-set termguicolors
-
-" Disable double width in devicons
-" let g:WebDevIconsUnicodeGlyphDoubleWidth=0
