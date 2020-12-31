@@ -1,0 +1,15 @@
+.include /etc/pulse/default.pa
+
+# Focusrite Scarlett 2i4 config
+
+# Remap outputs 1&2 separately
+load-module module-remap-sink sink_name=speakers sink_properties="device.description='Speakers'" remix=no master=alsa_output.usb-Focusrite_Scarlett_2i4_USB-00.analog-surround-40 channels=2 master_channel_map=front-left,front-right channel_map=front-left,front-right
+
+# Remap outputs 3&4 separately
+load-module module-remap-sink sink_name=aux sink_properties="device.description='Aux'" remix=no master=alsa_output.usb-Focusrite_Scarlett_2i4_USB-00.analog-surround-40 channels=2 master_channel_map=rear-left,rear-right channel_map=front-left,front-right
+
+# Remap input 1 separately
+load-module module-remap-source source_name=input-1 source_properties="device.description='Input 1'" master=alsa_input.usb-Focusrite_Scarlett_2i4_USB-00.analog-stereo remix=no channels=2 master_channel_map=front-left,front-left channel_map=left,right
+
+# Remap input 2 separately
+load-module module-remap-source source_name=input-2 source_properties="device.description='Input 2'" master=alsa_input.usb-Focusrite_Scarlett_2i4_USB-00.analog-stereo remix=no channels=2 master_channel_map=front-right,front-right  channel_map=left,right
